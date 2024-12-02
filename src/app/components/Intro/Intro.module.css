@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+.introTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    opacity: 0;
+    animation-name: showsUp;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+
+    font-family: "Dancing Script", cursive;
+    font-weight: normal;
+}
+
+.authorTitle {
+    
+    color: brown;
+}
+
+@keyframes showsUp {
+    0% {
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

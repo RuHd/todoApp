@@ -1,0 +1,109 @@
+.taskList {
+    margin-top: 20px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.taskItem {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* font-weight: bolder; */
+    padding: 10px;
+    height: 50px;
+
+    
+}
+
+.taskItem input {
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    /* border-bottom: 2px solid white; */
+
+}
+
+.taskItem input:focus{
+    outline: none;
+   
+
+}
+
+.taskTitle {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid white;
+
+}
+
+.doneBtn {
+    border: 2px solid white;
+    width: 40px;
+    height: 35px;
+    transform: translate(-10px,-3px);
+    background-color: transparent;
+    border-radius: 50%;
+    transition:  .3s ease-out;
+}
+
+.doneBtn:hover {
+border: 2px solid white}
+
+.btnRemove {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 5px;
+    transform: translate(10px, 5px);
+    background-color: transparent;
+    align-items: center;
+    min-width: 30px;
+    border-radius: 50%;
+    color: white;
+}
+
+.taskClicked {
+  opacity: .5;
+}
+
+.taskClicked::after {
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translate(40px,-50%);
+    content: "";
+    width: 85%;
+    height: 3px;
+    background-color: rgb(82, 82, 82);
+}
+
+/* Animation Section */
+
+    .taskAppears {
+        animation-name: taskMove;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+        animation-duration: .3s;
+    }
+
+    @keyframes taskMove {
+        0% {
+
+            transform: translate(-100px, -100px) rotateZ(-45deg);
+            opacity: .5;
+        }
+
+        100%{
+            transform: translate(0px, 0px) rotateZ(0deg);
+            opacity: 1;
+        }
+    }
+
